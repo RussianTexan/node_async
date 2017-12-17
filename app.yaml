@@ -1,0 +1,30 @@
+service: default
+runtime: nodejs
+env: flex
+
+# Skip test files
+skip_files: tests/*
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 2
+
+# network:
+#   instance_tag: node-async-instance
+#   name: node-async-network
+
+resources:
+  cpu: 2
+  memory_gb: 2.0
+
+env_variables:
+  DEBUG: route-loggin:info,route-loggin:error
+
+  # https://wiki.slb.com/display/cloud/SAuth+Environments
+  # Empty deployment means LOCAL_QA
+#   DEPLOYMENT:
+#   DEPLOYMENT: LOCAL_QA
+  DEPLOYMENT: GAE_QA
+#   DEPLOYMENT: GAE_P4D
+#   DEPLOYMENT: GAE_STAGE
+#   DEPLOYMENT: GAE_PRODUCTION

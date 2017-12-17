@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible Node.js debug attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+            "type": "node",
+            "request": "launch",
+            "protocol": "auto",
+            "name": "Launch Node",
+            "preLaunchTask": "tsc",
+            "program": "${workspaceRoot}/bin/server.js",
+            "cwd": "${workspaceRoot}",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "outFiles": [
+                "${workspaceRoot}/bin/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "protocol": "auto",
+            "name": "Debug test",
+            "preLaunchTask": "tsc",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "${workspaceRoot}/bin/tests/routes.test.js"
+            ],
+            "cwd": "${workspaceRoot}",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "outFiles": [
+                "${workspaceRoot}/bin/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "protocol": "auto",
+            "name": "Attach to Port",
+            "address": "localhost",
+            "port": 5858,
+            "outFiles": [
+                "${workspaceRoot}/bin/**/*.js"
+            ]
+        }
+    ]
+}

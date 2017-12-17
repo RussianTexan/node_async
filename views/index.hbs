@@ -1,0 +1,62 @@
+<h1>{{title}}</h1>
+<p>You can submit the following queries:
+    <br>
+    <i>NOTE: Make sure you capitalize the car brand name</i>
+</p>
+<lu>
+    <li>
+        <b>{{url}}/warranty/{Brand}</b> - will retrieve data via a sequential call to the data layer
+    </li>
+    <li>
+        <b>{{url}}/warranty-cb/{Brand}</b> - will retrieve data via a callback to the data layer
+    </li>
+    <li>
+        <b>{{url}}/warranty-then/{Brand}</b> - will retrieve data via an asyncronous call to the data layer using Promise.then(),
+        but
+        <font color="red">will fail catch to errors</font>
+    </li>
+    <li>
+        <b>{{url}}/warranty-then-catch/{Brand}</b> - will retrieve data via an asyncronous call to the data layer using Promise.then().catch()
+    </li>
+    <li>
+        <b>{{url}}/warranty-async/{Brand}</b> - will retrieve data via an asyncronous call to the data layer using Promise async/await
+    </li>
+</lu>
+<p>For example:
+    <lu>
+        <li>
+            <a href="{{url}}/warranty/Acura">{{url}}/warranty/Acura</a>
+        </li>
+        <li>
+            <a href="{{url}}/warranty-cb/Acura">{{url}}/warranty-cb/Acura</a>
+        </li>
+        <li>
+            <a href="{{url}}/warranty-then/Acura">{{url}}/warranty-then/Acura</a>
+        </li>
+        <li>
+            <a href="{{url}}/warranty-then-catch/Acura">{{url}}/warranty-then-catch/Acura</a>
+        </li>
+        <li>
+            <a href="{{url}}/warranty-async/Acura">{{url}}/warranty-async/Acura</a>
+        </li>
+    </lu>
+</p>
+<p>If the speciffied brand is not found, an error will be thrown. For example:
+    <lu>
+        <li>
+            <a href="{{url}}/warranty/Lada">{{url}}/warranty/Lada</a>
+        </li>
+        <li>
+            <a href="{{url}}/warranty-cb/Lada">{{url}}/warranty-cb/Lada</a>
+        </li>
+        <li>
+            <a href="{{url}}/warranty-then/Lada">{{url}}/warranty-then/Lada</a>
+        </li>
+        <li>
+            <a href="{{url}}/warranty-then-catch/Lada">{{url}}/warranty-then-catch/Lada</a>
+        </li>
+        <li>
+            <a href="{{url}}/warranty-async/Lada">{{url}}/warranty-async/Lada</a>
+        </li>
+    </lu>
+</p>

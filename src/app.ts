@@ -16,13 +16,11 @@ import { warrantyAsync } from './routes/warranty-async';
 
 import { Logger } from './logger';
 
-// [START debug]
 // Activate Google Cloud Trace and Debug when in production
 if (process.env.NODE_ENV === 'production') {
     // gtrace.start();
     // gdebug.start();
 }
-// [END debug]
 
 const app = exp();
 
@@ -31,7 +29,7 @@ app.set('../views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public
-// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, '../public', 'icon16.png')));
 
 // Add the request logger before anything else so that it can accurately log requests.
 app.use(Logger.requestMiddleware);

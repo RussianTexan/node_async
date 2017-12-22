@@ -3,7 +3,7 @@
 # async/await all the way
 ## v12/19/2017
 
-#### Introduction
+#### [Introduction] (docs/Slide01.PNG)
 - Promise
 - Async / await
 - A simple Node.js / Express.js application

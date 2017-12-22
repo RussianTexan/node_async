@@ -1,7 +1,7 @@
 ## Dmitriy Repin </h2>
 # BUILDING AND TESTING ASYNCHRONOUS NODE/EXPRESS ROUTING USING TYPESCRIPT
 # async/await all the way
-## v12/19/2017
+## 12/19/2017
 
 #### [Introduction](https://github.com/dmitriyrepin/node_async/blob/master/docs/Slide01.PNG)
 - [Promise](https://github.com/dmitriyrepin/node_async/blob/master/docs/Slide02.PNG)

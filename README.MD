@@ -3,8 +3,8 @@
 # async/await all the way
 ## v12/19/2017
 
-#### [Introduction] (docs/Slide01.PNG)
-- Promise
+#### Introduction
+- [Promise] (https://github.com/dmitriyrepin/node_async/blob/master/docs/Slide02.PNG)
 - Async / await
 - A simple Node.js / Express.js application
 
